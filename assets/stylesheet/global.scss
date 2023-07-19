@@ -1,0 +1,619 @@
+@viewport {
+    zoom: 1;
+    width: device-width;
+}
+
+$color1: #f0c030;
+$color2: #f0f0f0;
+$color3: #303030;
+$color4: #f07818;
+$color5: #487890;
+
+$colorDark1: #001A38;
+$colorDark2: #00224E;
+$colorDark3: #003367;
+$colorDark4: #171D20;
+$colorDark5: #1E2529;
+$colorDark6: #2F3133;
+
+$lightBlue1: #00A1DF;
+$lightBlue2: #007FD1;
+$lightBlue3: #0256C4;
+$lightBlue4: #0E37A3;
+$lightBlue5: #072C8C;
+
+@font-face {
+    font-family: "Montserrat";
+    src: url(../font/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "Montserrat Alternates";
+    src: url(../font/Montserrat_Alternates/MontserratAlternates-Regular.ttf);
+}
+
+@font-face {
+    font-family: "Open Sans";
+    src: url(../font/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf);
+}
+
+main {
+    // height: 625vh;
+    height: 500vh;
+
+    >.first_100vh {
+        height: 125vh;
+        background: linear-gradient(145deg, #d8d8d8, #ffffff);
+
+
+        >.first_100vh_header {
+            height: 80px;
+            background: $color3;
+            box-shadow: inset 5px 5px 0px #131313,
+                inset -5px -5px 0px #4d4d4d;
+            z-index: 2;
+
+            >header {
+                >.first_100vh_logo {
+                    height: 60px;
+
+                    >figure {
+                        >img {
+                            object-fit: cover;
+                            filter: drop-shadow(0 0 3.5px $color4);
+                        }
+                    }
+
+                    >strong {
+                        font: {
+                            family: 'Montserrat Alternates', Arial;
+                            size: 1.5rem;
+                            weight: 500;
+                        }
+
+                        color: $color2;
+                        height: 80px;
+                        top: -10px;
+                        right: -170px;
+                        padding: 0 10px 0 50px;
+                    }
+                }
+
+                >.header_menu_mobile {
+                    width: 60px;
+                    height: 60px;
+                    cursor: pointer;
+                    transition: .4s;
+
+                    >i {
+                        font-size: 2rem;
+                        color: $color4;
+                        transition: .4s;
+                    }
+
+                    >ul {
+                        opacity: 0;
+                        visibility: hidden;
+                        transition: .4s;
+                        width: 350%;
+                        background: $colorDark3;
+                        z-index: 5;
+
+                        >li {
+                            text-shadow: 0 0 0 $lightBlue1;
+
+                            &:hover {
+                                background: $color4;
+                                text-shadow: 2px 2px 1px $lightBlue1;
+
+                                >a {
+                                    color: $color2;
+                                }
+                            }
+
+                            >a {
+                                color: $lightBlue1;
+                                transition: .4s;
+
+                                font: {
+                                    family: 'Open Sans', Arial;
+                                    size: 1.2rem;
+                                    weight: 600;
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        background: $color4;
+
+                        >i {
+                            color: $color2;
+                            transform: rotate(-90deg);
+                        }
+
+                        >ul {
+                            opacity: 1;
+                            visibility: visible;
+                        }
+                    }
+                }
+            }
+        }
+
+        >.site_preview_wrapper {
+            height: calc(125vh - 80px);
+
+            >.site_preview {
+
+                >section {
+                    border-radius: 20px;
+                    box-shadow: inset -20px -20px 60px #cccccc,
+                        inset 20px 20px 60px #ffffff;
+
+                    >hgroup {
+                        font-family: 'Montserrat Alternates', Arial;
+
+                        >h4:nth-of-type(1) {
+                            width: fit-content;
+                            font-size: 1rem;
+                            text-shadow: 0 0 .5px $color3;
+                        }
+
+                        >h1 {
+                            width: fit-content;
+                            color: $color4;
+
+                            font: {
+                                family: Montserrat, Arial;
+                                size: 2rem;
+                            }
+                        }
+
+                        >h4:nth-of-type(2) {
+                            max-width: max-content;
+                            text-shadow: 0 0 .5px $color3;
+                            transition: text-shadow .4s;
+
+                            font: {
+                                size: 1rem;
+                                weight: bold;
+                            }
+                        }
+                    }
+
+                    >.skills_preview {
+                        // start of scrollbar
+                        // ::-webkit-scrollbar the scrollbar.
+                        // ::-webkit-scrollbar-button the buttons on the scrollbar (arrows pointing upwards and downwards).
+                        // ::-webkit-scrollbar-thumb the draggable scrolling handle.
+                        // ::-webkit-scrollbar-track the track (progress bar) of the scrollbar.
+                        // ::-webkit-scrollbar-track-piece the track (progress bar) NOT covered by the handle.
+                        // ::-webkit-scrollbar-corner the bottom corner of the scrollbar, where both horizontal and vertical scrollbars meet.
+                        // ::-webkit-resizer the draggable resizing handle that appears at the bottom corner of some elements.
+
+                        &::-webkit-scrollbar {
+                            // width: 7.2px;
+                            height: 7.2px;
+                        }
+
+                        &::-webkit-scrollbar-button {
+                            display: none;
+                        }
+
+                        &::-webkit-scrollbar-thumb {
+                            background: $color4;
+                            border-radius: 4px;
+
+                            &:hover {
+                                background: $lightBlue2;
+                            }
+                        }
+
+                        &::-webkit-scrollbar-track {
+                            background: #3030303d;
+                            border-radius: 4px;
+                        }
+
+                        &::-webkit-scrollbar-corner {
+                            display: none;
+                        }
+
+                        // end of scrollbar
+
+                        overflow: scroll hidden;
+                        width: 360px;
+                        height: 115px;
+                        cursor: default;
+
+                        >figure {
+                            width: 100px;
+                            height: 100px;
+                            background: #3030303d;
+                            transition: .4s;
+                            border: 3px solid #30303000;
+                            cursor: crosshair;
+
+                            >img {
+                                object-fit: contain;
+                                z-index: 1;
+                                transform: scale(.8);
+                            }
+
+                            &:hover {
+                                background: #30303000;
+                                border: 3px solid #3030303d;
+                            }
+                        }
+                    }
+
+                    >.social_preview {
+                        cursor: default;
+
+                        >a {
+                            overflow: hidden;
+                            font-size: 1.2rem;
+                            color: $lightBlue2;
+                            transition: .4s;
+
+                            >i {
+                                display: grid;
+                                place-items: center;
+                            }
+
+                            &:hover {
+                                color: $color4;
+                            }
+                        }
+                    }
+                }
+
+                >.parsa_dark {
+                    max-width: calc(388px / 1.25);
+                    max-height: calc(492px / 1.25);
+                    height: 50%;
+                    box-shadow: 20px 20px 60px #cccccc,
+                        -20px -20px 60px #ffffff;
+
+                    >img {
+                        object-fit: cover;
+                        filter: grayscale(.4);
+                    }
+                }
+            }
+        }
+    }
+
+    >.second_100vh {
+        height: 125vh;
+        background: linear-gradient(-145deg, #d8d8d8, #ffffff);
+
+        >.about_me_wrapper {
+            >section {
+                border-radius: 20px;
+                box-shadow: inset 20px -20px 60px #cccccc,
+                    inset -20px 20px 60px #ffffff;
+                max-width: 80%;
+                min-height: fit-content;
+
+                >h3 {
+                    color: $lightBlue2;
+                    text-transform: uppercase;
+
+                    font: {
+                        family: Montserrat, Arial;
+                        size: 1.1rem;
+                        weight: 600;
+                    }
+
+                    >span {
+                        color: $color4;
+
+                        &::first-letter {
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+
+                >p {
+                    font: {
+                        family: 'Open Sans', Arial;
+                        size: 1rem;
+                    }
+
+                    text-align: justify;
+                    text-align-last: center;
+
+                    >strong {
+                        text-transform: capitalize;
+                        color: $color4;
+                    }
+
+                    >a {
+                        color: $lightBlue2;
+                        transition: color .4s;
+
+                        text: {
+                            decoration: underline !important;
+                            transform: capitalize;
+                        }
+
+                        &:hover {
+                            color: $color4;
+                        }
+                    }
+                }
+            }
+
+            >section:nth-of-type(3) {
+                >p>span {
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    color: $color4;
+                }
+            }
+        }
+    }
+
+    >.third_100vh {
+        height: 125vh;
+        background: linear-gradient(45deg, #d8d8d8, #ffffff);
+
+        >.skills_wrapper {
+            >.skills {
+                >span {
+                    height: 10px;
+                    width: 90%;
+                    border-radius: 0 10px 0 10px;
+                    box-shadow: inset -2px 2px 5px #cccccc,
+                        inset 2px -2px 5px #ffffff;
+
+                    &::before {
+                        position: absolute;
+                        bottom: 150%;
+                        left: 3%;
+                        width: 95%;
+                        text-transform: uppercase;
+                        color: $color3;
+
+                        font: {
+                            family: 'Montserrat Alternates', Arial;
+                            size: .9rem;
+                        }
+                    }
+
+                    &::after {
+                        content: '';
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        background: $color4;
+                        border-radius: 0 10px 0 10px;
+                        box-shadow: inset 0 0 0 $lightBlue2;
+                    }
+                }
+
+                >span:nth-of-type(1) {
+                    &::before {
+                        content: 'html & css';
+                    }
+
+                    &::after {
+                        width: 80%;
+                    }
+
+                }
+
+                >span:nth-of-type(2) {
+                    &::before {
+                        content: 'sass';
+                    }
+
+                    &::after {
+                        width: 75%;
+                    }
+
+                }
+
+                >span:nth-of-type(3) {
+                    &::before {
+                        content: 'bootstrap';
+                    }
+
+                    &::after {
+                        width: 70%;
+                    }
+
+                }
+
+                >span:nth-of-type(4) {
+                    &::before {
+                        content: 'tailwind';
+                    }
+
+                    &::after {
+                        width: 50%;
+                    }
+
+                }
+
+                >span:nth-of-type(5) {
+                    &::before {
+                        content: 'seo';
+                    }
+
+                    &::after {
+                        width: 70%;
+                    }
+
+                }
+
+                >span:nth-of-type(6) {
+                    &::before {
+                        content: 'digital marketing';
+                    }
+
+                    &::after {
+                        width: 50%;
+                    }
+
+                }
+
+                >span:nth-of-type(7) {
+                    &::before {
+                        content: 'audio & video editing';
+                    }
+
+                    &::after {
+                        width: 80%;
+                    }
+
+                }
+
+                >span:nth-of-type(8) {
+                    &::before {
+                        content: 'english';
+                    }
+
+                    &::after {
+                        width: 70%;
+                    }
+
+                }
+
+                >span:nth-of-type(9) {
+                    &::before {
+                        content: 'typing speed';
+                    }
+
+                    &::after {
+                        width: 75%;
+                    }
+
+                }
+            }
+
+            >.portfolio {
+                >a {
+                    width: 65%;
+                    aspect-ratio: 1/1;
+                    border-radius: 20px;
+                    box-shadow: 20px -20px 60px #cccccc,
+                        -20px 20px 60px #ffffff;
+
+                    >figure {
+                        >img {
+                            object-fit: cover;
+                        }
+
+                        &::after {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 100%;
+                            height: 100%;
+                            position: absolute;
+                            z-index: 2;
+                            top: 100%;
+                            left: 0;
+                            transition: .4s;
+                            color: $color2;
+                            background: #303030da;
+
+                            font: {
+                                size: 1rem;
+                            }
+                        }
+
+                        &:hover {
+                            &::after {
+                                top: 0;
+                            }
+                        }
+                    }
+                }
+
+                >a:nth-of-type(1) {
+                    >figure::after {
+                        content: 'Mega Menu...';
+                    }
+                }
+
+                >a:nth-of-type(2) {
+                    >figure::after {
+                        content: 'Flexbox Layout...';
+                    }
+                }
+
+                >a:nth-of-type(3) {
+                    >figure::after {
+                        content: 'Grid Layout...';
+                    }
+                }
+            }
+
+        }
+    }
+
+    >.fourth_100vh {
+        height: 125vh;
+        background: linear-gradient(-45deg, #d8d8d8, #ffffff);
+
+        >.contact_wrapper {
+            >h2 {
+                color: $lightBlue2;
+                font-family: 'Motserrat', Arial;
+            }
+
+            >form {
+                font-family: 'Open Sans', Arial;
+
+                >section {
+                    border-radius: 20px;
+                    box-shadow: inset 20px 20px 60px #cccccc,
+                        inset -20px -20px 60px #ffffff;
+
+                    >label {
+                        span {
+                            color: $color4;
+                        }
+                    }
+
+                    >input {
+                        border-radius: 20px;
+                        border: 3px solid #3030303d;
+                        background-color: initial;
+                    }
+                }
+
+                >section:nth-of-type(1) {
+                    height: 15%;
+                }
+
+                >section:nth-of-type(2) {
+                    height: 15%;
+                }
+
+                >section:nth-of-type(3) {
+                    height: 70%;
+                }
+
+                >button {
+                    color: $color4;
+                    border: 3px solid #3030303d;
+                    border-radius: 20px;
+                    background: initial;
+                    text-transform: uppercase;
+                    transition: .4s;
+
+                    &:hover {
+                        color: $lightBlue2;
+                    }
+                }
+            }
+
+        }
+    }
+}

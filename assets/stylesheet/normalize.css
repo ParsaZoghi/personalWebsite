@@ -1,0 +1,11 @@
+*, *::before, *::after {
+  box-sizing: border-box !important;
+}
+li {
+  list-style-type: none !important;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit;
+}/*# sourceMappingURL=normalize.css.map */
